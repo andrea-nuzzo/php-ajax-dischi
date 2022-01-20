@@ -1,4 +1,4 @@
-main{
+#background{
     background-color: #1e2d3b;
 }
 
@@ -32,4 +32,13 @@ header img {
       text-align: center;
       margin: 0;
       color: #808080;
+}
+
+select{
+    width: 60%;
+    padding: 10px;
+    border-radius: 2rem;
+    background-color: black;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(85, 85, 85);
 }

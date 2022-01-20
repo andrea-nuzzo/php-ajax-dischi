@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
 </head>
-    <body>
+    <body id="background">
         <div id="app">
 
             <header>
@@ -25,6 +25,21 @@
             <main>
                 <div>
                     <div class="container">
+                        <div class="row">
+                            <div class="col m-5 d-flex justify-content-center">
+                                <select v-model="typegenre"name="" id="" @change=" recall(typegenre)">
+                                    <option value="">Select musical genre</option>
+                                    <option value="Rock">Rock</option>
+                                    <option value="Pop">Pop</option>
+                                    <option value="Jazz">Jazz</option>
+                                    <option value="Metal">Metal</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+
+
+
                         <div class="row p-5 gy-4">
                             <div class="col-12 col-sm-6 col-lg-4 mb-4" v-for="(item, index) in discs" :key="index">
                                 <div class="container d-flex flex-column justify-content-center" id="card">

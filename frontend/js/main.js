@@ -7,17 +7,32 @@ const app = new Vue({
 
     data:{
         discs:[],
-        genre: ,
+        typegenre: "",
     },
 
     created() {
         axios.get("http://localhost:8888/php-ajax-dischi/backend/index.php", {
             params: {
-                genre: this.genre
+                genre: this.typegenre
             }
         })
         .then((result) => {
             this.discs = result.data;
         })
+    },
+
+    methods:{
+        recall(typegenre){
+            axios.get("http://localhost:8888/php-ajax-dischi/backend/index.php", {
+                params: {
+                    genre: typegenre
+                }
+            })
+            .then((result) => {
+                this.discs = result.data;
+            })
+        }
     }
+
+    
 });
