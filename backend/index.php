@@ -5,6 +5,9 @@
     //Dichiaro un array vuoto dove inserire i dischi filtrati per genere
     $filtered_database = [];
 
+    // Dichiaro che le informazioni restituite nella risposta HTTP sono di tipo json
+    header('Content-Type: application/json');
+
 
     //Se la richiesta GET non è vuota ...
     if(!empty($_GET["genre"])){
@@ -18,16 +21,13 @@
                 }
             }
        }
-       // Assegno alla variabile $database il nuovo array filtrato
-       $database = $filtered_database;
+       // traduco la variabile contenente i dischi filtari in json ...
+        echo json_encode($filtered_database);
+
+        //esco.
+        die;
     }
 
-   
-   var_dump($database);
-
-    // Dichiaro che le informazioni restituite nella risposta HTTP sono di tipo json
-    header('Content-Type: application/json');
-    
     // Attraverso la funzione json_encode traduco il database in formato json
     echo json_encode($database);
 ?>
