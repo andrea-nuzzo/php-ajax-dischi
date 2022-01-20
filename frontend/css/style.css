@@ -1,0 +1,35 @@
+main{
+    background-color: #1e2d3b;
+}
+
+header{
+    background-color: #2e3a46;
+}
+
+header img {
+    height: 40px;
+}
+
+#card{
+    height: 100%;
+    background-color: #2e3a46;
+    padding: 30px;
+    border-radius: 2rem;
+
+}
+
+#card img{
+      width: 100%;
+}
+#card h3{
+    font-size: 18px;
+    margin-top: 20px ;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+#card p{
+      text-align: center;
+      margin: 0;
+      color: #808080;
+}
